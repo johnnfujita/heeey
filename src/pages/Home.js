@@ -12,8 +12,7 @@ const Home = (props) => {
     console.log(props.dimensions.width / 180)
     
     const [state, setstate] = useState(0)
-    useEffect(() => {setstate(1)
-    },[])
+    useEffect(() => {setstate(1)},[])
     return (
         
         <div className="home-container">
