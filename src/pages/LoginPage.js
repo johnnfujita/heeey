@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/loginpage.scss"
+
 
 const LoginPage = (props) => {
     return (

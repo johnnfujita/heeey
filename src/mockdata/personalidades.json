@@ -1,0 +1,76 @@
+{
+    "personalidades": [
+        {
+            "id": 0,
+            "nome": "Alok",
+            "descricao": ["dj", "musician", "philantropist"],
+            "dta": 15,
+            "hashes": ["#DJ", "#EletronicMusic", "#EDM"],
+            "profilePic": "alok",
+            "price": 1000.00
+        },
+        {
+            "id": 1,
+            "nome": "Bell Marques",
+            "descricao": ["musico", "axe", "carnaval", "folia"],
+            "dta": 2,
+            "hashes": ["#Bahia", "#Fortal", "#Folia", "#Micareta", "Axe"],
+            "profilePic": "bellmarques",
+            "price": 1000.00
+        },
+        {
+            "id": 2,
+            "nome": "Gusttavo Lima",
+            "descricao": ["musico", "sertanejo", "sofrência"],
+            "dta": 10,
+            "hashes": ["#FalaComigoBebe", "#Sertanejo", "#Sofrencia", "#Cantor", "#Boteco"],
+            "profilePic": "gl",
+            "price": 2500.00
+        },
+        {
+            "id": 3,
+            "nome": "Matuê",
+            "descricao": ["trapster", "cantor", "musico", "trap"],
+            "dta": 7,
+            "hashes": ["#KennyG", "#Chapado", "#Lean", "#Trap", "#Musica"],
+            "profilePic": "matue",
+            "price": 300.00
+        },
+        {
+            "id": 4,
+            "nome": "Wesley Safadão",
+            "descricao": ["forró", "cantor", "musico", "sertanejo"],
+            "dta": 14,
+            "hashes": ["#Forro", "#GarotaVip",  "#Musica", "Safadao"],
+            "profilePic": "safadao",
+            "price": 2000.00
+        },
+        {
+            "id": 5,
+            "nome": "Simaria",
+            "descricao": ["forró", "cantora", "sertanejo", "simoneesimaria"],
+            "dta": 5,
+            "hashes": ["#Forro", "#Coleguinhas", "#Musica", "SimoneeSimaria"],
+            "profilePic": "simaria",
+            "price": 1000.00
+        },
+        {
+            "id": 6,
+            "nome": "Simone",
+            "descricao": ["forró", "cantora", "sertanejo", "simoneesimaria"],
+            "dta": 5,
+            "hashes": ["#Forro", "#Coleguinhas", "#Musica", "SimoneeSimaria"],
+            "profilePic": "simone",
+            "price": 1000.00
+        },
+        {
+            "id": 7,
+            "nome": "Xand",
+            "descricao": ["forró", "cantor", "xandaviao"],
+            "dta": 9,
+            "hashes": ["#Forro", "#Xand", "#Musica", "Avioes"],
+            "profilePic": "xand",
+            "price": 1200.00
+        }
+    ]
+}

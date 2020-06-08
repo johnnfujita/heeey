@@ -1,6 +1,6 @@
 .header-container {
     height: 70px;
-    color: rgb(69, 255, 255);
+    outline: none;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
@@ -13,10 +13,32 @@
         align-items: center;
         margin-left: 20px;
         .header-anchor {
-            color: rgb(163, 125, 0);
+            color:  white;
             text-decoration: none;
-            padding:10px
-        
+            padding:10px;
+            outline: none;
+            transition: .4s color ease-in-out;
+            
+            &:after {
+                content: "";
+                position: relative;
+                width: 0;
+                height: 2px;
+                display: block;
+                margin-top: 5px;
+                right: 0;
+                background: #c40707;
+                transition: 0.4s ease;
+            }
+            &:hover {
+                color: #c40707;
+                &:after {
+                    position: relative;
+                    width: 100%;
+                    left: 0;
+                    background: #c40707;
+                }
+            }
         }
     }
 
@@ -30,6 +52,9 @@
             background-color: #333;
             border-radius: 16px;
             padding-left: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             .input-box {
                 background-color: #333;
                 border: none;
@@ -43,12 +68,35 @@
         }
         
         .container-left-anchors {
-
+            display: flex;
+            flex-direction: row;
             .header-anchor {
                 padding: 10px;
-                color: rgb(163, 125, 0);
+                color: white;
                 text-decoration: none;
                 font-size: 18px;
+                outline: none;
+                transition: .4s color ease-in-out;
+                &:after {
+                    content: "";
+                    position: relative;
+                    width: 0;
+                    height: 2px;
+                    display: block;
+                    margin-top: 5px;
+                    right: 0;
+                    background: #c40707;
+                    transition: 0.4s ease;
+                }
+                &:hover {
+                    color: #c40707;
+                    &:after {
+                        position: relative;
+                        width: 100%;
+                        left: 0;
+                        background: #c40707;
+                    }
+                }
             }
         }
         
