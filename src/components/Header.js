@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components"
 import { Search } from "@styled-icons/evaicons-solid/Search"
 
-import "../styles/components/header.scss"
+
 
 const Header = (props) => {
     return (

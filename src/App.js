@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home"
 import ProfilePage from "./pages/ProfilePage"
 import LoginPage from "./pages/LoginPage"
+import PersonalityPage from "./pages/PersonalityPage"
 
 function debounce(fn, ms) {
   let timer;
@@ -20,9 +21,10 @@ function debounce(fn, ms) {
 }
 
 const routes = [
-  {path: "/", name: "Home", Component: Home },
+  {path: "/", name: "Home", Component: Home},
   {path: "/profile", name: "Profile", Component: ProfilePage },
-  {path: "/login", name: "Login", Component: LoginPage }
+  {path: "/login", name: "Login", Component: LoginPage },
+  {path: "/personality/:id", name: "Personality", Component: PersonalityPage}
 
 ]
 
@@ -56,11 +58,12 @@ function App() {
         <Header />
         {
           routes.map(({path, Component}) => 
-            (<Route key={path} exact path={path}>
-              <Component dimensions={dimensions}/>
-            </Route>)
+            (<Route key={path}  exact path={path} render={(props)=><Component {...props} dimensions={dimensions}/>} />
+              
+            )
           )
         }
+        
     </div>
   );
 }

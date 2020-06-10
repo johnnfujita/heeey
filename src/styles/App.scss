@@ -2,9 +2,9 @@
 
 $black: #000000;
 $white: #ffffff;
-$primary: #9b2929;
-$black-secondary: #666;
-$white-second: #f1f1ff;
+$primary: #ff2022;
+$black-secondary: #151515;
+$white-second: lavender;
 
 
 @import "./varibles.scss";
@@ -13,6 +13,7 @@ $white-second: #f1f1ff;
 @import "./home.scss";
 @import "./profile.scss";
 @import "./loginpage.scss";
+@import "./interpreter.scss";
 
 body,
 html {
@@ -29,7 +30,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+a {
+  outline: none;
+}
 .container {
   width: 1560px;
   min-width: 1560px;

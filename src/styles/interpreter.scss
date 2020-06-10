@@ -1,0 +1,134 @@
+.personality-outter-container{
+    background-color: $black;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 850px 1fr;
+    .personality-container {
+        grid-column: 2 / 3;
+        background-color: black;
+        color: $white;
+        height:100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .personality-header {
+            width: 100%;
+            border-bottom: 1px solid rgba(255,255,255,0.08) ;
+            .personality-top-buttons {
+                display: flex;
+                height: 40px;
+                width: 100%;
+                flex-direction: row;
+                .personality-left-side-buttons {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    padding-left: 20px;
+                    
+                    .personality-back-button {
+                        width: 40px;
+                        display: flex;
+                        border: 1px solid rgba(255,255,255,0.04);
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100%;
+                        background-color: $black-secondary;
+                    }
+                }
+
+                .personality-right-side-buttons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    width: 20%;
+                    padding-right: 20px;
+                    .personality-share-button {
+                        width: 40px;
+                        display: flex;
+                        border: 1px solid rgba(255,255,255,0.04);
+                        justify-content: center;
+                        align-items: center;
+                        border-radius:100%;
+                        background-color: $black-secondary;
+                    }
+                    .personality-follow-button {
+                        width: 80px;
+                        display: flex;
+                        color: $primary;
+                        border: 1px solid rgba(255,255,255,0.04);
+                        font-weight: 600;
+
+                        
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 30px;
+                        background-color: $black-secondary;
+                        
+                    }
+                }
+
+            }
+            .personality-header-content {
+                height: 260px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                .personality-header-left-container {
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .personality-picture-container {
+                        display: flex;
+                        height: 160px;
+                        justify-content: center;
+                        align-items: center;
+                        width: 160px;
+                        border-radius: 100%;
+                        border: 6.5px solid #ff2022;
+                        .personality-picture {
+                            display: flex;
+                            object-fit: cover;
+                            border-radius: 75px;
+                            height: 150px;
+                            width: 150px;
+                        } 
+
+                    }
+                }
+                .personality-header-right-container {
+                    width: 75%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    .personality-info {
+                        margin: 40px 10px;
+                        .personality-title {
+                            font-size: 46px;
+                            font-weight: 600;
+
+                        }
+                        .personality-description {
+                            opacity: .5;
+                            font-weight: 400;
+                        }
+                        .personality-category {
+                            opacity: .5
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

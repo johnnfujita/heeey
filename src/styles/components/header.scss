@@ -49,16 +49,18 @@
         align-items: center;
 
         .input-container {
-            background-color: #333;
+            border: 1px solid rgba(255,255,255,0.04);
+            background-color: $black-secondary;
             border-radius: 16px;
             padding-left: 10px;
             display: flex;
             flex-direction: row;
             align-items: center;
             .input-box {
-                background-color: #333;
+                background-color: $black-secondary;
                 border: none;
                 width: 280px;
+
                 height: 32px;
                 border-radius: 16px;
                 color: white;

@@ -31,7 +31,7 @@ const Home = (props) => {
                             
                             return idx+1 <= window.innerWidth / 200 ? (
                                     
-                                <Link key={person.id} className="row-element-container" style={{opacity: state}}>
+                                <Link to={`/personality/${person.id}`}key={person.id} className="row-element-container" style={{opacity: state}}>
                                     <div className="element-image-container">
                                         <img src={require(`../assets/images/${person.profilePic}.jpg`)} alt={person.nome} className="thumbnail-personality"/>
                                         <div className="overlay-area">
@@ -40,7 +40,7 @@ const Home = (props) => {
                                     </div>
                                     <div className="element-text">
                                     <div className="element-title">{person.nome}</div>
-                                        <div className="element-categorie">{person.descricao[0]}</div>
+                                        <div className="element-categorie">{person.bestKnownFor}</div>
                                     </div>
                                 </Link>
                                 
@@ -73,7 +73,7 @@ const Home = (props) => {
                                     </div>
                                     <div className="element-text">
                                     <div className="element-title">{person.nome}</div>
-                                        <div className="element-categorie">{person.descricao[0]}</div>
+                                        <div className="element-categorie">{person.bestKnownFor}</div>
                                     </div>
                                 </Link>
                             ) : ""
@@ -103,7 +103,7 @@ const Home = (props) => {
                                     </div>
                                     <div className="element-text">
                                     <div className="element-title">{person.nome}</div>
-                                        <div className="element-categorie">{person.descricao[0]}</div>
+                                        <div className="element-categorie">{person.bestKnownFor}</div>
                                     </div>
                                 </Link>
                             ) : ""
