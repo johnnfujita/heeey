@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import {  Route } from 'react-router-dom';
+import {  Route, Switch } from 'react-router-dom';
 import "./styles/App.scss";
 import gsap from "gsap"
 // importing components
@@ -8,6 +8,11 @@ import Home from "./pages/Home"
 import ProfilePage from "./pages/ProfilePage"
 import LoginPage from "./pages/LoginPage"
 import PersonalityPage from "./pages/PersonalityPage"
+import BookPalinha from "./pages/BookPalinha";
+import PageNotFound from "./pages/PageNotFound";
+
+import PrivateRouteWrapper from "./components/PrivateRouteWrapper"
+import AuthContext from "./context/AuthContext";
 
 function debounce(fn, ms) {
   let timer;
@@ -22,13 +27,19 @@ function debounce(fn, ms) {
 
 const routes = [
   {path: "/", name: "Home", Component: Home},
-  {path: "/profile", name: "Profile", Component: ProfilePage },
   {path: "/login", name: "Login", Component: LoginPage },
-  {path: "/personality/:id", name: "Personality", Component: PersonalityPage}
+  {path: "/personality/:id", name: "Personality", Component: PersonalityPage},
+  {path: "/book/:id", name: "Booking", Component: BookPalinha},
+  {path: "", name: "404page", Component: PageNotFound}
+]
 
+const privateRoutes = [
+  {path: "/profile", name: "ProfilePage", Component: ProfilePage}
 ]
 
 function App() {
+
+  const [auth, setAuth] = useState(false);
   gsap.to("body", 0, {css: { visibility: "visible"}});
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
@@ -54,17 +65,25 @@ function App() {
   });
 
   return (
+    <AuthContext.Provider value={{auth, setAuth}}>
     <div className="App">
         <Header />
-        {
-          routes.map(({path, Component}) => 
-            (<Route key={path}  exact path={path} render={(props)=><Component {...props} dimensions={dimensions}/>} />
+        <Switch>
+        {privateRoutes.map(({path, Component}) => (
+          <PrivateRouteWrapper   path={path} component={Component} dimensions={dimensions} />
+        ))}
+        { 
+          routes.map(({path,name, Component}) => 
+            (<Route key={name}  exact path={path} render={(props)=><Component {...props} dimensions={dimensions}/>} />
               
             )
           )
+          
         }
         
+        </Switch>
     </div>
+    </AuthContext.Provider>
   );
 }
 

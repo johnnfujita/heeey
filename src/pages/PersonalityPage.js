@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import { Link } from "react-router-dom"
 import { ShareAlternative } from "@styled-icons/entypo/ShareAlternative"
 import { ArrowBackIos } from "@styled-icons/material-rounded/ArrowBackIos";
 import { Info } from "@styled-icons/material-outlined/Info";
@@ -9,14 +10,23 @@ import styled from 'styled-components'
 import { VideoOutline} from "@styled-icons/evaicons-outline/VideoOutline";
 
 import Modal from "../components/Modal";
+import ModalContentExplaining from '../components/ModalContentExplaining';
 
 let pJson = require("../mockdata/personalidades.json")
 let pList = pJson.personalidades
 const PersonalityPage = (props) => {
-    console.log(props.match.params.id)
+    
+    const modalRef = useRef()
+
+    const openModal = () => {
+        modalRef.current.openModal()
+    }
+
     return (
         <div className="personality-outter-container">
-            <Modal />
+            <Modal ref={modalRef}>
+            <ModalContentExplaining />
+            </Modal>
             <div className="personality-container">
                <div className="personality-header">
                    <div className="personality-top-buttons">
@@ -47,8 +57,8 @@ const PersonalityPage = (props) => {
                </div>
 
                 <div className="button-and-how-to-container">
-                    <div className="button-contract">CONECTE-SE &nbsp;R${pList[props.match.params.id].price}</div>
-                    <div className="how-to-button"> <InfoIcon size={24} /> &nbsp;Como Funciona?</div>
+                    <Link to={`/book/${props.match.params.id}`} className="button-contract">CONECTE-SE &nbsp;R${pList[props.match.params.id].price}</Link>
+                    <div className="how-to-button" onClick={()=> openModal()}> <InfoIcon size={24} /> &nbsp;Como Funciona?</div>
                 </div>
 
                 <div className="complementary-info-container">

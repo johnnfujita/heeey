@@ -1,9 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef, useImperativeHandle } from 'react'
 
-const Modal = (props) => {
+const Modal = forwardRef((props, ref) => {
 
     const [modalState, setModalState] = useState(false);
     
+    useImperativeHandle(ref, ()=>{
+        return {
+            openModal: () => openModal(),
+            closeModal:()=> closeModal()
+        }
+    })
+
     const openModal = () => {
         console.log(modalState)
         setModalState(true)
@@ -18,13 +25,18 @@ const Modal = (props) => {
     return (
         <>
         <div className={`modal-background modal-showing-${modalState}`}>
-            <button onClick={()=> openModal()}>open Modal</button>
-            <button onClick={()=> closeModal()}> close Modal</button>
-            <div className={`modal-content-pure modal-content-${modalState}`}>jfdojfo</div>
+
+            <div className={`modal-content-pure modal-content-${modalState}`}>
+                <div className="close-area">
+                    <div onClick={()=>closeModal()} className="close-button">x</div>
+                </div>
+                {props.children}
+            </div>
+
         </div>
-        <button onClick={()=> openModal()}>open Modal</button>
+       
         </>
     )
-}
+})
 
 export default Modal

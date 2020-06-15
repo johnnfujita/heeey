@@ -142,6 +142,7 @@
             .button-contract {
                 height:50px;
                 display: flex;
+                text-decoration: none;
                 justify-content: center;
                 align-items: center;
                 width: 90%;
@@ -162,6 +163,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                &:hover {
+                    cursor:pointer;
+                }
             }
         }
 

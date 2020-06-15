@@ -11,14 +11,15 @@ $white-second: lavender;
 @import "./breakpoints.scss";
 @import "./components/header.scss";
 @import "./components/modal.scss";
+@import "./components/modalcontentexplaining.scss";
 @import "./home.scss";
 @import "./profile.scss";
 @import "./loginpage.scss";
 @import "./interpreter.scss";
-
+@import "./pagenotfound.scss";
 body,
 html {
-  
+ 
   user-select: none;
   background: $black;
   visibility: hidden;

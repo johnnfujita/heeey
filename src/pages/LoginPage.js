@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AuthContext from '../context/AuthContext'
+import { Redirect } from 'react-router-dom';
 
 
 const LoginPage = (props) => {
+    const Auth = useContext(AuthContext);
     return (
-        <div className="login-container">
-            loga ai padrin
-        </div>
+        !Auth.auth ? (<div className="login-container">
+        loga ai padrin</div>) : (<Redirect to="/profile" />) 
     )
 }
 
