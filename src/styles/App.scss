@@ -3,8 +3,10 @@
 $black: #000000;
 $white: #ffffff;
 $primary: #ff2022;
+$light-primary: #ffa1a1;
 $black-secondary: #151515;
 $white-second: lavender;
+$lightgray: #bbb;
 
 
 @import "./varibles.scss";
@@ -17,6 +19,7 @@ $white-second: lavender;
 @import "./loginpage.scss";
 @import "./interpreter.scss";
 @import "./pagenotfound.scss";
+@import "./booking.scss";
 body,
 html {
  
