@@ -1,5 +1,8 @@
 import React,{ useState} from 'react';
 import { Formik, Form, Field } from "formik";
+import styled from "styled-components";
+import {ShoppingCart} from "@styled-icons/material-outlined/ShoppingCart";
+
 
 const messageOptions = ["Mensagem", "Conselho Pessoal", "Dica Técnica", "Palinha Personalizada" ]
 const BookPalinha = (props) => {
@@ -157,7 +160,7 @@ const BookPalinha = (props) => {
                                 <label htmlFor="cardinfo-name-field" className="labelfield"></label>
                                 <Field name="cardInfo.name" type="text" id="cardinfo-name-field" />
                             </div>
-                            <button disabled={isSubmitting} type="submit">submit</button>
+                            <button disabled={isSubmitting} className="submit-request-button"type="submit"><ShoppingCartIcon size={24} /> Checkout $100</button>
 
                         </Form>
                     </div>
@@ -166,10 +169,14 @@ const BookPalinha = (props) => {
                     
                 </Formik>
                 <div className="booking-right-container"></div>
-            </div>
+                </div>
             
         </div>
     )
 }
 
 export default BookPalinha 
+
+
+const ShoppingCartIcon = styled(ShoppingCart)`
+`
