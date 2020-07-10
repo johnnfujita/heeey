@@ -39,7 +39,7 @@ const privateRoutes = [
 
 function App() {
 
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
   gsap.to("body", 0, {css: { visibility: "visible"}});
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,

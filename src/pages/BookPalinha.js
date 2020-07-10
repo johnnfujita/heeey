@@ -91,7 +91,7 @@ const BookPalinha = (props) => {
                             <div className={`occasion-group occasion-group-${selectionToggle}`}>
                                 <label htmlFor="occasion-options" className="labelfield">Qual o motivo?</label>
                                 <div className="occasion-custom-selection">
-                                    <span><Field name="occasion"  readonly="readonly" className="toggle-selection-occasion" onClick={handleSelectionToggle}/></span>
+                                    <span><Field name="occasion"  readOnly="readonly" className="toggle-selection-occasion" onClick={handleSelectionToggle}/></span>
                                     <div className={` occasion-container occasion-options-${selectionToggle}`}>
                                         {
                                                 
@@ -117,7 +117,7 @@ const BookPalinha = (props) => {
                             </div>
                             <div className="message-instructions-group">
                                 <label htmlFor="intructions-input" className="labelfield label-meu-pedido">Meu pedido:</label>
-                                <Field name="instructions" maxlength="350"component="textarea" type="text" className="form-input-text"  id="intructions-input" placeholder="Diga pra ele para parar de babar político e ir pagar os calote dele."/>
+                                <Field name="instructions" maxLength="350"component="textarea" type="text" className="form-input-text"  id="intructions-input" placeholder="Diga pra ele para parar de babar político e ir pagar os calote dele."/>
                             </div>
 
                             <div className="contact-info-group">
