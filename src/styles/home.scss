@@ -57,7 +57,7 @@
                     align-self: flex-end;
                     transition: 0.4s color ease-in-out;
                     &:hover {
-                        color: #c40707;
+                        color: $primary;
                         cursor: pointer;
                     }
                 }

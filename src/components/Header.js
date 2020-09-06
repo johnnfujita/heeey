@@ -10,7 +10,7 @@ const Header = (props) => {
     return (
         <header className="header-container">
             <div className="container-right">
-                <NavLink className="header-anchor" to="/">Home</NavLink>
+                <NavLink className="header-anchor" to="/"><img className="header-logo" src={require("../assets/images/HEEEY.svg")}/></NavLink>
             </div>
             <div className="container-left">
                 <div className="input-container">

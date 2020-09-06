@@ -1,11 +1,11 @@
 
     input[type="checkbox"],
     input[type='radio'] {
-      --active: #ff2022;
+      --active: #ff8f00;
       --active-inner: #fff;
-      --focus: 2px rgba(196, 2, 2, 0.3);
-      --border: #c78886;
-      --border-hover: #f02020;
+      --focus: 2px #ff8f00;
+      --border: #f3e7b0;
+      --border-hover: #ffb333;
       --background: #fff;
       --disabled: #F6F8FF;
       --disabled-inner: #E1E6F9;
@@ -380,7 +380,7 @@
                   transition: all 1s ease-in-out;
                   &:hover {
                     transform: scale(0.9);
-                
+                    cursor: pointer;
                     box-shadow: 4px 4px 10px 1px rgba(0,0,0,.2);
                     color: $primary;
                   }

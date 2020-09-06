@@ -5,7 +5,7 @@ import {ShoppingCart} from "@styled-icons/material-outlined/ShoppingCart";
 
 
 const messageOptions = ["Mensagem", "Conselho Pessoal", "Dica Técnica", "Palinha Personalizada" ]
-const BookPalinha = (props) => {
+const BookHeeey = (props) => {
     
 
     
@@ -175,7 +175,7 @@ const BookPalinha = (props) => {
     )
 }
 
-export default BookPalinha 
+export default BookHeeey
 
 
 const ShoppingCartIcon = styled(ShoppingCart)`

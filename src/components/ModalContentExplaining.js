@@ -39,15 +39,15 @@ export default ModalContentExplaining
 
 
 const RefundIcon = styled(Refund2)`
-    color: #ff2022;
+    color: #ff8f00;
 `
 const ReceiptIcon = styled(Receipt)`
-    color: #ff2022;
+    color: #ff8f00;
 `
 const CalendarCheckIcon = styled(CalendarCheck)`
-color: #ff2022;
+color: #ff8f00;
 `
 
 const LinkIcon = styled(Link)`
-    color: #ff2022;
+    color: #ff8f00;
 `

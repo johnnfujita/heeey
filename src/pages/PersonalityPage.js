@@ -72,11 +72,11 @@ const PersonalityPage = (props) => {
 
                     <div className="personality-bottom-container">
                     <div className="personality-left-bottom-container">
-                        <div className="header-left-bottom">O que é Palinha?</div>
+                        <div className="header-left-bottom">O que é HEEEY?</div>
                         <div className="content-left-bottom">
                             <div className="first-step">
                                 <div className="icon-first-step"><DocumentTextIcon size={24} /> + <UserVoiceIcon size={30} /> </div>
-                                <div className="text-first-step">Idealize Interprete & Conteúdo</div>
+                                <div className="text-first-step">Selecione Interprete & Conteúdo</div>
                             </div>
                             <div className="second-step">
                                 <div className="icon-second-step"><MessageCheckIcon size={30} /></div>

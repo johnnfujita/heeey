@@ -18,27 +18,36 @@
             padding:10px;
             outline: none;
             transition: .4s color ease-in-out;
-            
-            &:after {
-                content: "";
-                position: relative;
-                width: 0;
-                height: 2px;
-                display: block;
-                margin-top: 5px;
-                right: 0;
-                background: #c40707;
-                transition: 0.4s ease;
-            }
+        
+        .header-logo {
+            object-fit: cover;
+            height:60px;
+            border-radius: 10px;
+            transition: all 1s ease-in-out;
             &:hover {
-                color: #c40707;
-                &:after {
-                    position: relative;
-                    width: 100%;
-                    left: 0;
-                    background: #c40707;
-                }
+                transform: scale(1.1)
             }
+        }
+            // &:after {
+            //     content: "";
+            //     position: relative;
+            //     width: 0;
+            //     height: 2px;
+            //     display: block;
+            //     margin-top: 5px;
+            //     right: 0;
+            //     background: $primary;
+            //     transition: 0.4s ease;
+            // }
+            // &:hover {
+            //     color: $primary;
+            //     &:after {
+            //         position: relative;
+            //         width: 100%;
+            //         left: 0;
+            //         background: $primary;
+            //     }
+            // }
         }
     }
 
@@ -87,16 +96,16 @@
                     display: block;
                     margin-top: 5px;
                     right: 0;
-                    background: #c40707;
+                    background: $primary;
                     transition: 0.4s ease;
                 }
                 &:hover {
-                    color: #c40707;
+                    color: $primary;
                     &:after {
                         position: relative;
                         width: 100%;
                         left: 0;
-                        background: #c40707;
+                        background: $primary;
                     }
                 }
             }

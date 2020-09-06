@@ -8,7 +8,7 @@ import Home from "./pages/Home"
 import ProfilePage from "./pages/ProfilePage"
 import LoginPage from "./pages/LoginPage"
 import PersonalityPage from "./pages/PersonalityPage"
-import BookPalinha from "./pages/BookPalinha";
+import BookHeeey from "./pages/BookHeeey";
 import PageNotFound from "./pages/PageNotFound";
 
 import PrivateRouteWrapper from "./components/PrivateRouteWrapper"
@@ -29,7 +29,7 @@ const routes = [
   {path: "/", name: "Home", Component: Home},
   {path: "/login", name: "Login", Component: LoginPage },
   {path: "/personality/:id", name: "Personality", Component: PersonalityPage},
-  {path: "/book/:id", name: "Booking", Component: BookPalinha},
+  {path: "/book/:id", name: "Booking", Component: BookHeeey},
   {path: "", name: "404page", Component: PageNotFound}
 ]
 
