@@ -1,0 +1,120 @@
+
+.outside-row-container {
+    height:430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    .app-title {
+    
+        font-size: 36px;
+        color: white;
+        height: 8%;
+        display: flex;
+        align-items: flex-start;
+    }
+    .app-row {
+        height: 80%;
+       background: black;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        
+        scrollbar-width: none;  /* Firefox */
+        
+        
+            
+            .row-container {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            width: 100%;
+            .row-container::-webkit-scrollbar {
+                display: none;
+            }
+            
+            
+                .row-content {
+                    text-decoration: none;
+                    height: 100%;
+                    background-color: black;
+                  
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: white;
+                    transition: all 0.6s  cubic-bezier(0.42, 0.15, 0.22, 0.96) ;
+                    .element-image-container {
+                        
+                        background-color: #333;
+                        position: relative;
+                        height: 80%;
+                        border-radius: 12px;
+                        display: flex;
+                        margin: 12px;
+                       
+                        .element-image {
+                            transition: transform 400ms ease;
+                            height: 100%;
+                            width: 160px;
+                            border-radius: 12px;
+                            object-fit: cover;
+                            &:hover {
+                            transform: scale(1.04);
+                            opacity: 1;
+                            cursor: pointer;
+                            }
+                        }
+                        .overlay-area {
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6));
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+
+                            .price-tag {
+                                position: relative;
+                                padding: 4px;
+                            }
+                        }
+                        
+                    
+                    }
+
+                    .element-text {
+                        margin-top: 10px;
+                        height: 20%;
+                        color: white;
+                        .element-title {
+                            width:100%;
+                            font-size: 18px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-weight: 600;
+                            
+                        }
+                        .element-categorie {
+                            font-size: 12px;
+                            color: rgba(255,255,255,0.5);
+                        }   
+                    } 
+                }
+        }
+        
+    }
+    .app-row::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+.outside-row-container-backdrop {
+    height: 200px;
+}

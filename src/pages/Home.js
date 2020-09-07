@@ -2,17 +2,18 @@ import React, {useEffect, useState} from 'react'
 
 
 import { Link } from "react-router-dom"
+import Row from '../components/Row';
+import requests from "../requests";
 
 let artistJson = require("../mockdata/personalidades.json");
 let artistList = artistJson.personalidades; 
 
 
 
-const Home = (props) => {
-    console.log(props.dimensions.width / 180)
+function Home(props) {
+  
     
-    const [state, setstate] = useState(0)
-    useEffect(() => {setstate(1)},[])
+  
     return (
         
         <div className="home-container">
@@ -20,7 +21,9 @@ const Home = (props) => {
                 <div className="jumbotron-content"></div>
             </div>
             <div className="row-section-container">
-                <div className="row-area">
+                <Row title="Heeey Famous" artistList={artistList}fetchUrl={requests.fetchTopRated} isLargeRow />
+                <Row title="Heeey Famous" artistList={artistList}fetchUrl={requests.fetchTopRated} isLargeRow />
+                {/* <div className="row-area">
                     <div className="row-header">
                         <div className="category-title">Música</div>
                         <div className="seeall-button">mais</div>
@@ -112,7 +115,7 @@ const Home = (props) => {
 
                     </div>
                 </div>
-
+ */}
 
 
             </div>

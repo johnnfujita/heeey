@@ -10,7 +10,7 @@ const PrivateRouteWrapper = ({component: Component, ...rest}) => {
         exact
             {...rest}
             render={
-                (props) => Auth.auth ? (<Component {...props} />) : (<Redirect to="/login" />) }
+                (props) => Auth.auth ? (<Component {...props} />) : (<Redirect to="/microappollis/login" />) }
         />
     )
 }
