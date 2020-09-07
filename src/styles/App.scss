@@ -3,6 +3,7 @@
 $black: #000000;
 $white: #ffffff;
 $primary: #ff8f00;
+$mou-primary: #4dd0e1;
 $light-primary: #ffa1a1;
 $black-secondary: #151515;
 $white-second: lavender;
@@ -20,6 +21,11 @@ $lightgray: #bbb;
 @import "./interpreter.scss";
 @import "./pagenotfound.scss";
 @import "./booking.scss";
+@import "./components/login.scss";
+@import "./components/register.scss";
+@import "./components/activate.scss";
+@import "./components/row.scss";
+
 body,
 html {
  
@@ -28,7 +34,7 @@ html {
   visibility: hidden;
   overscroll-behavior: none;
   margin: 0;
-  
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont,"Roboto",  "Segoe UI",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;

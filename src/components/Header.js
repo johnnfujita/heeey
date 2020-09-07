@@ -19,7 +19,7 @@ const Header = (props) => {
                 </div>
             <div className="container-left-anchors">
                 <NavLink className="header-anchor" to="/profile">Profile</NavLink>
-                <NavLink className="header-anchor" to="/login">Login</NavLink>
+                <NavLink className="header-anchor" to="/microappollis/login">Login</NavLink>
             </div>
             </div>
             
