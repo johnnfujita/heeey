@@ -2,9 +2,12 @@
     background-color: $black;
     min-height: 100vh;
     height: auto;
-    width: 100%;
+    width: 100vw;
     display:grid;
     grid-template-columns: 1fr 850px 1fr;
+    @include media("<=phone") {
+        grid-template-columns: 1fr;
+    }
     .personality-container {
         grid-column: 2 / 3;
         background-color: black;
@@ -14,21 +17,27 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        @include media("<=phone") {
+            grid-column: 1 / 2 ;
+        }
         .personality-header {
-            width: 100%;
+            width: 100vw;
             border-bottom: 1px solid rgba(255,255,255,0.08) ;
             .personality-top-buttons {
+                margin-top: 12px;
                 display: flex;
                 height: 40px;
-                width: 100%;
+                width: 100vw;
                 flex-direction: row;
                 .personality-left-side-buttons {
                     width: 80%;
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-start;
-                    padding-left: 20px;
                     
+                    @include media("<=phone") {
+                        width: 50%;
+                    }
                     .personality-back-button {
                         width: 40px;
                         display: flex;
@@ -36,6 +45,7 @@
                         justify-content: center;
                         align-items: center;
                         border-radius: 100%;
+                        margin-left: 12px;
                         background-color: $black-secondary;
                     }
                 }
@@ -44,7 +54,7 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
-                    width: 20%;
+                    width: 50%;
                     padding-right: 20px;
                     .personality-share-button {
                         width: 40px;
@@ -79,12 +89,19 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
+                @include media("<=phone") {
+                    height: 180px;
+                    margin-left: 12px;
+                }
                 .personality-header-left-container {
                     width: 25%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include media("<=phone") {
+                        align-items: flex-start;
+                    }
                     .personality-picture-container {
                         display: flex;
                         height: 160px;
@@ -93,28 +110,45 @@
                         width: 160px;
                         border-radius: 100%;
                         border: 6.5px solid $primary;
+                        @include media("<=phone") {
+                            height: 90px;
+                            width: 90px;
+                            border: 4.5px solid $primary;
+                            margin-top:  32px ;
+                        }
                         .personality-picture {
                             display: flex;
                             object-fit: cover;
                             border-radius: 75px;
                             height: 150px;
                             width: 150px;
+                            @include media("<=phone") {
+                                height: 82px;
+                                width: 82px;
+                            }
                         } 
 
                     }
                 }
                 .personality-header-right-container {
-                    width: 75%;
+                    width: 70%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
+                    @include media("<=phone") {
+                        margin-left: 12px;
+                    }
                     .personality-info {
                         margin: 40px 10px;
+                
                         .personality-title {
                             font-size: 46px;
                             font-weight: 600;
+                            @include media("<=phone") {
+                                font-size: 32px;
+                            }
 
                         }
                         .personality-description {
@@ -139,6 +173,10 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            @include media("<=phone") {
+                width: 100vw;
+                
+            }
             .button-contract {
                 height:50px;
                 display: flex;
@@ -156,6 +194,15 @@
                     cursor: pointer;
                     color: $white;
                     transform: scale(1.1) translateY(-2px);
+                }
+                @include media("<=phone") {
+                    
+                    &:hover {
+                        background-color: $primary;
+                        cursor: pointer;
+                        color: $white;
+                        transform: scale(1.06) translateY(-2px);
+                    }
                 }
             }
             .how-to-button {

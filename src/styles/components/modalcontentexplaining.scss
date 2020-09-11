@@ -11,12 +11,20 @@
         font-weight: 600;
         height: 50px;
         width: 100%;
+        @include media("<=phone") {
+            margin-top: 32px;
+            
+        }
     }
 
     .modal-chart-container {
         margin-bottom: 10px;
+
         display: flex;
         flex-direction: row;
+        @include media("<=phone") {
+            margin-top: 12px;
+        }
         .left-container-line-chart {
             width: 30%;
             align-items: center;
