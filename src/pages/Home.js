@@ -11,7 +11,7 @@ let artistList = artistJson.personalidades;
 
 
 function Home(props) {
-  
+    
     
   
     return (

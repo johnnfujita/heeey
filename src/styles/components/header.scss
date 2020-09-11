@@ -1,13 +1,17 @@
 .header-container {
-    height: 70px;
+    min-height: 70px;
     outline: none;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @include media("<=phone"){
+        width: 100vw;
+    }
     .container-right {
         display: flex;
+       
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
@@ -49,13 +53,98 @@
             //     }
             // }
         }
+        @include media("<=phone") {
+            
+            
+        }
     }
 
     .container-left {
+       
         grid-column: 3 / 4;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include media("<=phone") {
+            margin-right: 8px;
+        
+        }
+
+        .search-button-container{
+            display: none;
+        }
+
+        .hamburger-menu-clickable {
+            display: none;
+        }
+
+        @include media("<=phone"){
+            .search-button-container {
+                transition: all 0.4s ease-in-out;
+                height: 32px;
+                width: 32px;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 12px;
+                border: 1px solid rgba(255,255,255,0.12);
+                &:hover {
+                    cursor: pointer;
+
+                }
+                .search-close-button {
+                    transition: all 0.4s ease-in-out;
+                    color: rgba(255,255,255,0.6);
+                }
+            }
+            .hamburger-menu-clickable {
+                transition: all 0.4s ease-in-out;
+                display: flex;
+                height: 42px;
+                width: 42px;
+                margin-right: 8px;
+                align-items: center;
+                    justify-content: center;
+                &:hover {
+                    cursor: pointer;
+
+                }
+                .hamburger-menu {
+                    transition: all 0.4s ease-in-out;
+                    height: 80%;
+                    border: 1px solid rgba(255,255,255,0.12);
+                    width: 80%;
+                    border-radius: 6px;
+                    padding: 6px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    justify-content: space-around;
+                    .hamburger-stripe {
+                        height: 3px;
+                        width: 80%;
+                        background-color: rgba(255,255,255,1);
+                        margin: 2px;
+                    }
+                   
+                }
+                .hamburger-close-button {
+                    transition: all 0.4s ease-in-out;
+                    height: 32px;
+                    width: 32px;
+                    color: rgba(255,255,255,0.6);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgba(255,255,255,0.12);
+                    border-radius: 100%;
+                }
+                
+            }    
+        } 
+        
 
         .input-container {
             border: 1px solid rgba(255,255,255,0.04);
@@ -65,6 +154,10 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            @include media("<=phone"){
+                display: none;
+            }
+            
             .input-box {
                 background-color: $black-secondary;
                 border: none;
@@ -78,9 +171,13 @@
     
         }
         
+    
         .container-left-anchors {
             display: flex;
             flex-direction: row;
+            @include media("<=phone"){
+                display: none;
+            }
             .header-anchor {
                 padding: 10px;
                 color: white;
@@ -112,4 +209,60 @@
         }
         
     }
+    .header-bottom-container { 
+        display: none;
+    }
+    @include media("<=phone") {
+        .header-bottom-container {
+            display: grid;
+            transition: all 0.4s ease-in-out;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            background-color: black;
+            grid-column: 1 / 4;
+            .container-left-anchors {
+                transition: all 0.4s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                .header-anchor {
+                    height: 30px;
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 24px;
+                    margin: 2px 0px 6px 16px;
+                    &:hover {
+                        cursor: pointer;
+                    }                
+                }
+
+            }
+            .input-container {
+                transition: all 0.4s ease-in-out;
+                border: 1px solid rgba(255,255,255,0.04);
+                background-color: $black-secondary;
+                border-radius: 25px;
+                width: 90%;
+                margin-left: 12px;
+                padding-left: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 12px;
+                
+                
+                .input-box {
+                    transition: all 0.4s ease-in-out;
+                    background-color: $black-secondary;
+                    border: none;
+                    width: 80px;
+    
+                    height: 50px;
+                    border-radius: 16px;
+                    color: white;
+                    padding-left: 14px;
+                }
+        
+            }
+        }
+    }
+    
 }

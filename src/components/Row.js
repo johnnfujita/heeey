@@ -45,18 +45,7 @@ const Row = ({ title, artistList, fetchUrl, isLargeRow}) => {
                                         <div className="element-categorie">{person.bestKnownFor}</div>
                                     </div>
                                 </Link>
-                        <Link to={`/personality/${person.id}`}key={person.id} className="row-content" style={{opacity: opacity}}>
-                        <div className="element-image-container">
-                            <img src={require(`../assets/images/${person.profilePic}.jpg`)} alt={person.nome} className="element-image"/>
-                            <div className="overlay-area">
-                                <div className="price-tag">R${person.price}</div>
-                            </div>
-                        </div>
-                        <div className="element-text">
-                        <div className="element-title">{person.nome}</div>
-                            <div className="element-categorie">{person.bestKnownFor}</div>
-                        </div>
-                    </Link>
+                        
                     </>
                     )) : movies.map((movie, idx) => 
                     (
