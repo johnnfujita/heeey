@@ -1,34 +1,46 @@
 .personality-outter-container{
-    background-color: $black;
-    min-height: 100vh;
-    height: auto;
+    background-color: red;
+    
+    height: 100%;
     width: 100vw;
     display:grid;
     grid-template-columns: 1fr 850px 1fr;
     @include media("<=phone") {
         grid-template-columns: 1fr;
+        justify-content: center;
+                align-items: center;
     }
     .personality-container {
         grid-column: 2 / 3;
         background-color: black;
         color: $white;
-        height:100%;
-        width: 100%;
+        
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         @include media("<=phone") {
             grid-column: 1 / 2 ;
+            justify-content: center;
+            align-items: center;
+           
         }
         .personality-header {
-            width: 100vw;
+            width: 100%;
+            height: auto;
             border-bottom: 1px solid rgba(255,255,255,0.08) ;
+            @include media("<=phone") {
+                width: 100vw;
+            }
             .personality-top-buttons {
                 margin-top: 12px;
                 display: flex;
                 height: 40px;
-                width: 100vw;
+                width: 100%;
                 flex-direction: row;
+                @include media("<=phone") {
+                    width: 100vw;
+                }
                 .personality-left-side-buttons {
                     width: 80%;
                     display: flex;
@@ -169,6 +181,7 @@
             width: 100%;
             background-color: $black;
             margin-top: 30px;
+            
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -218,12 +231,19 @@
         }
 
         .complementary-info-container {
-            height: 400px;
+            height: 600px;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            @include media("<=phone") {
+                width: 90vw;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                
+            }
             .ttr-hash-container {
                 height: 50%;
                 display: flex;
@@ -231,6 +251,7 @@
                 width: 100%;
                 background-color: #1a1a1a;
                 border-radius: 6px;
+                padding: 12px;
                 .respond-container {
                     
                     height: 100%;
@@ -270,8 +291,12 @@
                         align-items: flex-start;
                         
                         line-height: 1.2px;
-                        margin: 30px 0px 0px 30px;
-                        
+                        margin: 0px 0px 0px 30px;
+                        @include media("<=phone") {
+                            margin: 30px 0px 0px 10px;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: repeat(5, 1fr);
+                        }
                         .hash-anchors {
                             position: relative;
                             display: flex;
@@ -279,10 +304,16 @@
                             align-items: center;
                             height: 20px;
                             width: 80px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                             font-size: 16px;
                             color: rgba(255,255,255,0.7);
                             text-decoration: none;
                             transition: all .5s ease-in-out;
+                            @include media("<=phone") {
+                                width: 100px;
+                            }
                             &:hover {
                                 color: $primary;
                                 transform: translateY(-2px);
@@ -299,14 +330,23 @@
                 justify-content: space-between;
                 align-items: flex-start;
                 width: 100%;
+                @include media("<=phone") {
+                    flex-direction: column;
+                    height: auto;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
                 .personality-left-bottom-container {
-                    width: 50%;
+                   
                     padding: 20px;
                     display:flex;
-                    
+                    width: 30%;
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: center;
+                    @include media("<=phone") {
+                        width: 100%;
+                    }
                     .header-left-bottom {
                         font-size: 18px;
                         width: 100%;
@@ -322,7 +362,7 @@
                         padding: 30px;
                         .first-step {
                             border-right: 1px solid rgba(255,255,255,0.1);
-                            padding-left: 10px;
+                            padding: 0px 14px 0px 14px;
                             .icon-first-step {
                               
                             }
@@ -333,8 +373,9 @@
                             }
                         }
                         .second-step {
-                            padding-left: 10px;
+                            
                             border-right: 1px solid rgba(255,255,255,0.1);
+                            padding: 0px 14px 0px 14px;
                             .icon-second-step {
                                 
                             }
@@ -345,7 +386,8 @@
                             }
                         }
                         .third-step {
-                            padding-left: 10px;
+                           
+                            padding: 0px 10px 0px 10px;
                             .icon-third-step {
 
                             }
@@ -360,11 +402,14 @@
                 .personality-right-bottom-container {
                     display: flex;
                     flex-direction: column;
-                    width: 50%;
-                  
+                    
+                    width: 70%;
                     padding: 20px;
                     justify-content: flex-start;
                     align-items: center;
+                    @include media("<=phone") {
+                        width: 100%;
+                    }
                     .header-right-bottom {
                         width: 100%;
                         font-size: 18px;
