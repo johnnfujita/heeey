@@ -1,5 +1,5 @@
 .personality-outter-container{
-    background-color: red;
+    background-color: $black;
     
     height: 100%;
     width: 100vw;
@@ -291,7 +291,7 @@
                         align-items: flex-start;
                         
                         line-height: 1.2px;
-                        margin: 0px 0px 0px 30px;
+                        margin: 30px 0px 0px 30px;
                         @include media("<=phone") {
                             margin: 30px 0px 0px 10px;
                             grid-template-columns: repeat(2, 1fr);
