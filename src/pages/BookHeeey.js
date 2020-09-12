@@ -145,7 +145,7 @@ const BookHeeey = (props) => {
                                 <label htmlFor="private" className="labelfield">Manter o vídeo oculto do profile do artista</label>
                                                            
                             </div>
-                            <div className="payment-data-group">
+                            {/* <div className="payment-data-group">
                                 <div className="title">Dados do Cartão</div>
                                 <div className="explanations-group">
                                     <div className="explanation-text">No caso do artista não confirmar a realização do vídeo, qualquer cobrança é retornada. </div>
@@ -159,7 +159,7 @@ const BookHeeey = (props) => {
                                 <Field name="cardInfo.cvc" type="text" id="cardinfo-cvc-field" />
                                 <label htmlFor="cardinfo-name-field" className="labelfield"></label>
                                 <Field name="cardInfo.name" type="text" id="cardinfo-name-field" />
-                            </div>
+                            </div> */}
                             <button disabled={isSubmitting} className="submit-request-button"type="submit"><ShoppingCartIcon size={24} /> Checkout $100</button>
 
                         </Form>
